@@ -15,5 +15,21 @@ String.prototype.customSearch = function(subString){
     return -1;
 }
 
+console.log(String.fromCharCode(97-32))
+
+//custom upper case convertion string method
+String.prototype.convertToUpperCase = function(){
+    let upper = "";
+    for(let i = 0; i < this.length; i++){
+        let charCode = this[i].charCodeAt()
+        console.log(charCode)
+        if(charCode >= 97 && charCode <= 122){
+          upper += String.fromCharCode(charCode - 32)
+        }else{
+            upper += String.fromCharCode(charCode)
+        }
+    }
+    return upper;
+}
 
 
