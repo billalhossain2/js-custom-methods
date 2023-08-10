@@ -32,4 +32,19 @@ String.prototype.convertToUpperCase = function(){
     return upper;
 }
 
+// custom lower case method implemented 
+String.prototype.convertToLowerCase = function(){
+    let lower = "";
+    for(let i = 0; i < this.length; i++){
+        let charCode = this[i].charCodeAt();
+        if(charCode >= 65 && charCode <= 90){
+            lower += String.fromCharCode(charCode + 32)
+        }else{
+            lower += this[i]
+        }
+    }
+    return lower;
+}
+
+
 
